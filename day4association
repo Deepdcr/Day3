@@ -1,0 +1,153 @@
+
+public class AssociationTest
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		I i1 = new I();
+		i1.wachingMovie("MOVIE");
+		Restaurant r = i1.lookingForRestaurant();
+		FoodRestaurant fd = r.offeringFood();
+		KFC kfc = fd.foodRestaurantOfferingFood();
+		System.out.println(kfc);
+		i1.feelingNostalgia();
+		i1.reminder();
+		
+
+	}
+}
+	class Company 
+	{
+		void MdCalling()
+		{
+			System.out.println("company MD called for meeting....");
+			System.out.println("feeling like my work from home days gonna end soon");
+		}
+	}
+
+	class I
+	{
+		String guitar;
+		String classRoom;
+		String library;
+
+		Vehicle v = new Vehicle();
+		TwoWheeler tw = new TwoWheeler();
+		GasBill gb = new GasBill();
+		Hotel bh = new Hotel();
+		Toy bt = new Toy();
+		
+		I(){}
+		
+		void wachingMovie(String x)
+		{
+			System.out.println("I was watching movie..." +x);
+			Company compObj = new Company();
+			compObj.MdCalling();
+			System.out.println("Thanks for the AC inside stopped me from melting, it's so hot outside");
+		}
+		
+
+		Restaurant lookingForRestaurant()
+		{
+			System.out.println("looking restaurant for meeting");
+			Restaurant r = new Restaurant();
+			return r;
+
+		}
+
+		void feelingNostalgia()
+		{
+			System.out.println("good old days with guitar, classRoom and library");
+		}
+
+		void reminder()
+		{
+			System.out.println("REMINDER.....");
+			System.out.println("pay GasBill" +gb);
+			System.out.println("Book Hotel " +bh);
+			System.out.println("Buy Toy " +bt);
+		}
+
+		@Override
+		public String toString() {
+			return "I [guitar=" + guitar + ", classRoom=" + classRoom + ", library=" + library + ", v=" + v + ", tw="
+					+ tw + ", gb=" + gb + ", bh=" + bh + ", bt=" + bt + ", toString()=" + super.toString() + "]";
+		}
+
+		
+		
+
+	}
+
+	class AirConditioner
+	{
+
+	}
+
+	class Restaurant
+	{
+		FoodRestaurant offeringFood() 
+		{
+			FoodRestaurant fd = new FoodRestaurant();
+			return fd;
+		}
+	}
+
+	class FoodRestaurant extends Restaurant
+	{
+		KFC foodRestaurantOfferingFood()
+		{
+			KFC kfc = new KFC();
+			return kfc;
+		}
+	}
+
+	class KFC extends FoodRestaurant
+	{
+		AirConditioner ac = new AirConditioner();
+		Aquarium aq = new Aquarium();
+
+		void kfcFoodRestaurantOfferingFood()
+		{
+			System.out.println("provide food with comfort of cooling " + ac + " and " + aq);
+		}
+
+	}
+
+	class Food 
+	{
+
+	}
+
+	class Vehicle
+	{
+
+	}
+
+	class TwoWheeler extends Vehicle
+	{
+
+	}
+
+	class Aquarium 
+	{
+
+	}
+
+	class Hotel
+	{
+
+	}
+
+	class Toy
+	{
+
+	}
+
+	class GasBill
+	{
+		
+	}
+	
