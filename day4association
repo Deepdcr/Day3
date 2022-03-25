@@ -1,15 +1,16 @@
-
-public class AssociationTest
+public class Association
 {
 
 	public static void main(String[] args)
 	{
 		// TODO Auto-generated method stub
+		
 		I i1 = new I();
 		i1.wachingMovie("MOVIE");
 		Restaurant r = i1.lookingForRestaurant();
 		FoodRestaurant fd = r.offeringFood();
 		KFC kfc = fd.foodRestaurantOfferingFood();
+		kfc.kfcFoodRestaurantOfferingFood();
 		System.out.println(kfc);
 		i1.feelingNostalgia();
 		i1.reminder();
@@ -31,15 +32,14 @@ public class AssociationTest
 		String guitar;
 		String classRoom;
 		String library;
-
 		Vehicle v = new Vehicle();
 		TwoWheeler tw = new TwoWheeler();
 		GasBill gb = new GasBill();
 		Hotel bh = new Hotel();
 		Toy bt = new Toy();
 		
-		I(){}
-		
+	
+
 		void wachingMovie(String x)
 		{
 			System.out.println("I was watching movie..." +x);
@@ -84,7 +84,23 @@ public class AssociationTest
 	class AirConditioner
 	{
 
+		@Override
+		public String toString() {
+			return "AirConditioner []";
+		}
+
 	}
+	class Aquarium 
+	{
+
+		@Override
+		public String toString() {
+			return "Aquarium []";
+		}
+
+		
+		}
+
 
 	class Restaurant
 	{
@@ -114,6 +130,11 @@ public class AssociationTest
 			System.out.println("provide food with comfort of cooling " + ac + " and " + aq);
 		}
 
+		@Override
+		public String toString() {
+			return "KFC [ac=" + ac + ", aq=" + aq + "]";
+		}
+
 	}
 
 	class Food 
@@ -123,31 +144,45 @@ public class AssociationTest
 
 	class Vehicle
 	{
-
+		Vehicle(){}
 	}
 
 	class TwoWheeler extends Vehicle
 	{
-
+		TwoWheeler(){}
 	}
 
-	class Aquarium 
-	{
-
-	}
+	
+	
 
 	class Hotel
 	{
 
+		@Override
+		public String toString() {
+			return "Hotel []";
+		}
+		
 	}
 
 	class Toy
 	{
 
+		@Override
+		public String toString() {
+			return "Toy []";
+		}
+		
 	}
 
 	class GasBill
 	{
+
+		@Override
+		public String toString() {
+			return "GasBill []";
+		}
 		
 	}
+	
 	
