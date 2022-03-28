@@ -1,0 +1,126 @@
+
+public class Communication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+abstract class communication implements sharing
+{
+	abstract void spreadKnowledge();
+}
+interface sharing
+{
+	void sharingInformation();
+}
+
+class verbalCommunication extends communication
+{
+
+	@Override
+	public void sharingInformation() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	void spreadKnowledge() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+class intraPersonalCommunication extends verbalCommunication 
+{
+	void reading()
+	{
+		
+	}
+	void selfTalking()
+	{
+		
+	}
+	void meditating()
+	{
+		
+	}
+}
+class interPersonalCommunication extends verbalCommunication
+{
+	void Call()
+	{
+		
+	}
+
+}
+class smallGroupCommunication extends verbalCommunication implements sharing
+{	
+	void meeting()
+ {
+	
+ }
+
+	@Override
+	public void sharingInformation() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}
+
+class publicSpeaking extends verbalCommunication
+{
+	void speech()
+	{
+		
+	}
+	
+}
+
+class NonVerbalCommunication extends Communication
+{
+	void facialExpressions()
+	{
+		
+	}
+	void bodyPosture()
+	{
+		
+	}
+	void eyeContact()
+	{
+		
+	}
+
+}
+
+class writtenCommunication extends Communication
+{
+	void email()
+	{
+		
+	}
+	void textMessage()
+	{
+		
+	}
+}
+class visualCommunication extends Communication implements sharing
+{
+	void presentation()
+	{
+		
+	}
+	void googleMaps()
+	{
+		
+	}
+	@Override
+	public void sharingInformation() {
+		// TODO Auto-generated method stub
+		
+	}
+}
